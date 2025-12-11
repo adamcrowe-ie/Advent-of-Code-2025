@@ -130,8 +130,9 @@ int main(){
 
     DisjointSet ds(n);
 
-    complete_circuit(coords, pairs, ds, 0, n);
+    int lim = n;
+    complete_circuit(coords, pairs, ds, 0, lim);
 
     std::cout << "Result for part 1: " << find_circuit_sizes(ds, n) << "\n";
-    std::cout << "Result for part 1: " << complete_circuit(coords, pairs, ds, n, num_pairs);
+    std::cout << "Result for part 2: " << complete_circuit(coords, pairs, ds, lim, num_pairs);
 }
